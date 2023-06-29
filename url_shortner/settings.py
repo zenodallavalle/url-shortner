@@ -126,3 +126,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 SHORT_URL_LENGTH = 5
 SHORT_URL_BASE = "https://url.zenodallavalle.com"
+SHORT_URL_DEV_BASE = "http://localhost:8000"  # Used for development if DEBUG=True

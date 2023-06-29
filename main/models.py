@@ -32,12 +32,12 @@ class UrlShortner(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.short_url:
-            self.short_url = self._gen_url_key()
+            self.url_key = self._gen_url_key()
         super().save(*args, **kwargs)
 
     @property
     def short_url(self):
-        return f'{getattr(settings, "SHORT_URL_BASE", "")}/{self.url_key}/'
+        return f'{getattr(settings, "SHORT_URL_DEV_BASE" if settings.DEBUG else "SHORT_URL_BASE", "")}/{self.url_key}/'
 
     @property
     def n_visits(self):
