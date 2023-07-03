@@ -12,4 +12,12 @@ class UrlShortnerAdmin(admin.ModelAdmin):
     readonly_fields = ("n_visits", "created", "edit", "last_visit", "short_url")
 
 
+class VisitAdmin(admin.ModelAdmin):
+    readonly_fields = (
+        "url",
+        "datetime",
+    )
+
+
 admin.site.register(UrlShortner, UrlShortnerAdmin)
+admin.site.register(Visit, VisitAdmin)
