@@ -1,6 +1,5 @@
 
 *.env
-production_settings.py
 
 
 # MAC OS
