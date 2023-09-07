@@ -20,9 +20,7 @@ sys.path.append(
     )["PYTHON_SITE_PACKAGES_PATH"]
 )
 
-os.environ.setdefault(
-    "DJANGO_SETTINGS_MODULE", "expendituresTracer.production_settings"
-)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "url_shortner.production_settings")
 
 try:
     application = get_wsgi_application()
